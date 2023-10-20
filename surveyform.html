@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        .c {
+            text-align: center;
+        }
+
+        .c h6 {
+            color: whitesmoke;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        body {
+            background-color: #0daaff;
+        }
+
+        .centered-form {
+            width: max-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
+
+        #surveyForm {
+            width: 70%;
+            padding: 40px;
+        }
+    </style>
+    <title>Survey Form</title>
+</head>
+<body class="p-3 m-0 border-0 bd-example m-0 border-0">
+    <h1>Customer Survey Form</h1>
+    <div class="container centered-form">
+        <form id="surveyForm">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="Name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="Name">
+                </div>
+                <div class="col-md-6">
+                    <label for="Email" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="Email">
+                </div>
+            </div>
+            <div>
+                <h6>Is this your first time using our products and services?</h6>
+                <label for="yes">
+                    <input type="radio" id="yes" name="option" value="Yes">Yes
+                </label>
+                <label for="no">
+                    <input type="radio" id="no" name="option" value="No">No
+                </label>
+            </div>
+
+            <div>
+                <h6>Would you recommend our products and services to your friends and colleagues?</h6>
+                <label>
+                    <input type="radio" value="Yes">Yes
+                </label>
+                <label>
+                    <input type="radio" value="No">No
+                </label>
+            </div>
+
+            <div>
+                <h6>How satisfied are you with our company overall?</h6>
+                <label for="satisfied">
+                    <input type="radio" id="satisfied" name="satisfaction" value="Satisfied">Satisfied
+                </label>
+                <label for="undecided">
+                    <input type="radio" id="undecided" name="satisfaction" value="Undecided">Undecided
+                </label>
+                <label for "unsatisfied">
+                    <input type="radio" id="unsatisfied" name="satisfaction" value="Unsatisfied">Unsatisfied
+                </label>
+            </div>
+
+            <h6>Do you have any suggestions to improve our services?</h6>
+            <label for="message"></label>
+            <textarea id="message" name="message" rows="4" cols="70"></textarea>
+
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    <div class="c">
+<h6>&#169; 2018 Customer Survey Form. All Rights Reserved &#8739; Designed by <span style="color: black;">W3Layouts</span></h6>
+
+    </div>
+</body>
+</html>

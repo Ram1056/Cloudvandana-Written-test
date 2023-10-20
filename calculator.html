@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <style>
+      body {
+         background-color:grey;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         margin: 0;
+      }
+      .calculator {
+         text-align: center;
+         background-color:whitesmoke;
+      }
+      .b {
+         background-color: black;
+         color: white;
+         text-align: center;
+         font-size: 30px;
+         width: 100px;
+         height: 100px;
+      }
+      .o {
+         background-color: gray;
+         color: white;
+         text-align: center;
+         font-size: 30px;
+         width: 100px;
+         height: 100px;
+      }
+      .g {
+         color: white;
+         text-align: center;
+         font-size: 30px;
+         width: 100px;
+         height: 100px;
+      }
+      table {
+         border-collapse: collapse;
+      }
+      .c {
+         font-size: 25px;
+      }
+      td {
+         padding: 0;
+      }
+   </style>
+   <script>
+      function ac() {
+         document.getElementById("res").value = "";
+      }
+      function show(input) {
+         if (input === '+' || input === '-' || input === '*' || input === '%') {
+            document.getElementById("res").value += input;
+         } else {
+            document.getElementById("res").value += input;
+         }
+      }
+      function cal() {
+         var output = eval(document.getElementById("res").value);
+         document.getElementById("res").value = output;
+      }
+   </script>
+</head>
+<body>
+<div class="calculator">
+   <table border="1">
+      <tr>
+         <td colspan="3" align="center">
+            <input type="text" id="res" style="width: 250px; height: 60px; background-color:white;">
+         </td>
+         <td> <button class="b" style="background-color:green;" onclick="ac()">AC</button></td>
+      </tr>
+      <tr>
+         <td align="center">
+            <button class="b" onclick="show('9')">9</button>
+         </td>
+         <td align="center">
+            <button class="b" onclick="show('8')">8</button>
+         </td>
+         <td align="center">
+            <button class="b" onclick="show('7')">7</button>
+         </td>
+         <td align="center">
+            <button class="o" onclick="show('+')">+</button>
+         </td>
+      </tr>
+      <tr>
+         <td align="center">
+            <button class="b" onclick="show('4')">4</button>
+         </td>
+         <td align="center">
+            <button class="b" onclick="show('5')">5</button>
+         </td>
+         <td align="center">
+            <button class="b" onclick="show('6')">6</button>
+         </td>
+         <td align="center">
+            <button class="o" onclick="show('-')">-</button>
+         </td>
+      </tr>
+      <tr>
+         <td align="center">
+            <button class="b" onclick="show('1')">1</button>
+         </td>
+         <td align="center">
+            <button class="b" onclick="show('2')">2</button>
+         </td>
+         <td align="center">
+            <button class="b" onclick="show('3')">3</button>
+         </td>
+         <td align="center">
+            <button class="o" onclick="show('%')">%</button>
+         </td>
+      </tr>
+      <tr>
+         <td align="center">
+            <button class="b" onclick="show('.')">.</button>
+         </td>
+         <td align="center">
+            <button class="b" onclick="show('0')">0</button>
+         </td>
+         <td align="center">
+            <button class="b" onclick="cal('=')">=</button>
+         </td>
+         <td align="center">
+            <button class="o" onclick="show('*')">*</button>
+         </td>
+      </tr>
+   </table>
+</div>
+</body>
+</html>
+
